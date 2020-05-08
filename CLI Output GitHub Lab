@@ -1,0 +1,78 @@
+CLI Output
+----------------------------------------------------
+vocstartsoft:~/environment $ sudo apt update
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease             
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease           
+Hit:4 https://download.docker.com/linux/ubuntu bionic InRelease                                                     
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease                                                   
+Reading package lists... Done                     
+Building dependency tree       
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+vocstartsoft:~/environment $ sudo apt install -y git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+git is already the newest version (1:2.17.1-1ubuntu0.7).
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+vocstartsoft:~/environment $ git --version
+git version 2.17.1
+vocstartsoft:~/environment $ git config --global user.name "DylanDaugherty"
+vocstartsoft:~/environment $ git config --global user.email "liquidsolidvapor@gmail.com"
+vocstartsoft:~/environment $ git config --global user.email liquidsolidvapor@gmail.com
+vocstartsoft:~/environment $ git clone https://github.com/DylanDaugherty/it252
+Cloning into 'it252'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+vocstartsoft:~/environment $ ls
+README.md  it252
+vocstartsoft:~/environment $ cd it252
+vocstartsoft:~/environment/it252 (master) $ ls
+README.md  bird.txt  insect.tct  reptiles.txt
+vocstartsoft:~/environment/it252 (master) $ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        bird.txt
+        insect.tct
+        reptile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+vocstartsoft:~/environment/it252 (master) $ git add -all
+error: did you mean `--all` (with two dashes ?)
+vocstartsoft:~/environment/it252 (master) $ git add --all
+vocstartsoft:~/environment/it252 (master) $ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   bird.txt
+        new file:   insect.tct
+        new file:   reptile.txt
+
+vocstartsoft:~/environment/it252 (master) $ git commit -m "Added information about birds, insects, and reptiles."
+[master 4e8b5c2] Added information about birds, insects, and reptiles.
+ 3 files changed, 15 insertions(+)
+ create mode 100644 bird.txt
+ create mode 100644 insect.tct
+ create mode 100644 reptile.txt
+vocstartsoft:~/environment/it252 (master) $ git push
+Username for 'https://github.com/DylanDaugherty/it252': DylanDaugherty
+Password for 'https://DylanDaugherty@github.com/DylanDaugherty/it252': 
+Counting objects: 5, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 852 bytes | 426.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/DylanDaugherty/IT252.git
+To https://github.com/DylanDaugherty/it252
+   27af5dd..4e8b5c2  master -> master
+vocstartsoft:~/environment/it252 (master) $ 
