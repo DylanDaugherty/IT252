@@ -1,2 +1,2 @@
 # IT252
-Mostly AWS Stuff
+Mostly AWS and azure Stuff
