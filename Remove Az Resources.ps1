@@ -1,0 +1,1 @@
+﻿Get-AzResourceGroup|forEach-object {Remove-AzResourceGroup -force $_.ResourceGroup}
